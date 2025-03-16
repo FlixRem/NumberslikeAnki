@@ -25,9 +25,9 @@ function AnkiStatsWidget() {
       fontSize: "14px",
       boxShadow: "0px 0px 10px rgba(0,0,0,0.3)"
     }}>
-      <p>📘 Neue Karten: {newCards}</p>
-      <p>🟠 Lernen: {learningCards}</p>
-      <p>✅ Wiederholungen: {reviewCards}</p>
+      <p>Neue Karten: {newCards}</p>
+      <p>Lernen: {learningCards}</p>
+      <p>Wiederholungen: {reviewCards}</p>
     </div>
   );
 }
