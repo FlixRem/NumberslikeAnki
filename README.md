@@ -1,0 +1,1 @@
+Mit diesem Plugin kannst du deine Lernstatistiken in RemNote im Anki-Stil sehen! 🔥 Es zeigt dir jederzeit eine Übersicht über: ✅ Neue Karten – Karten, die du heute zum ersten Mal siehst. 🟠 Lernkarten – Karten, die du gerade erarbeitest. ✅ Wiederholungen – Karten, die du im Langzeitgedächtnis festigst.
