@@ -1,0 +1,22 @@
+{
+  "manifestVersion": 1,
+  "id": "numberslikeanki",
+  "name": "Numbers Like Anki",
+  "author": "FlixRem",
+  "repoUrl": "https://github.com/FlixRem/NumberslikeAnki",
+  "version": {
+    "major": 0,
+    "minor": 0,
+    "patch": 2
+  },
+  "theme": [],
+  "enableOnMobile": false,
+  "description": "Zeigt RemNote-Lernstatistiken im Anki-Stil an.",
+  "requestNative": false,
+  "requiredScopes": [
+    {
+      "type": "All",
+      "level": "Read"
+    }
+  ]
+}
