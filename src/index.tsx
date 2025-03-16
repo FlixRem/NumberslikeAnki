@@ -1,18 +1,10 @@
-import { renderWidget, useAPIEventListener, usePlugin } from "@remnote/plugin-sdk";
+import { renderWidget, declareIndexPlugin } from "@remnote/plugin-sdk";
 import { useState } from "react";
 
 function AnkiStatsWidget() {
-  const plugin = usePlugin();
   const [newCards, setNewCards] = useState(0);
   const [learningCards, setLearningCards] = useState(0);
   const [reviewCards, setReviewCards] = useState(0);
-
-  // Holt die Statistik-Daten aus RemNote
-  useAPIEventListener("remnote:daily_card_counts", (data) => {
-    setNewCards(data.new_cards);
-    setLearningCards(data.learning_cards);
-    setReviewCards(data.review_cards);
-  });
 
   return (
     <div style={{
@@ -33,5 +25,10 @@ function AnkiStatsWidget() {
   );
 }
 
-// Registriere das Widget im Plugin
-renderWidget(AnkiStatsWidget);
+// 🔹 Plugin wird hier offiziell registriert
+declareIndexPlugin(async (plugin) => {
+  await plugin.app.registerWidget("anki-stats", AnkiStatsWidget, {
+    widgetTab: "home",
+    name: "Anki Stats",
+  });
+});
